@@ -11,8 +11,9 @@ class LoginScreen extends StatelessWidget {
         children: [
           Image.asset("assets/images/banner.png"),
           Align(
-              alignment: Alignment.bottomLeft,
-              child: Image.asset("assets/images/stars.png")),
+            alignment: Alignment.bottomLeft,
+            child: Image.asset("assets/images/stars.png"),
+          ),
           Padding(
             padding: const EdgeInsets.all(32),
             child: Column(
@@ -28,27 +29,36 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     const SizedBox(height: 32),
                     const Text(
-                      "Sistema de gestão de contas",
+                      "Sistema de Gestão de Contas",
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 32),
+                      style: TextStyle(
+                        fontSize: 32,
+                      ),
                     ),
                     const SizedBox(height: 32),
                     TextFormField(
-                      decoration: InputDecoration(label: Text("Email")),
+                      decoration: const InputDecoration(
+                        label: Text("E-mail"),
+                      ),
                     ),
                     const SizedBox(height: 16),
                     TextFormField(
                       obscureText: true,
-                      decoration: InputDecoration(label: Text("Senha")),
+                      decoration: const InputDecoration(
+                        label: Text("Senha"),
+                      ),
                     ),
                     const SizedBox(height: 32),
                     ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                          backgroundColor: WidgetStatePropertyAll(
-                        Color(0XFFFFA902),
-                      )),
-                      child: Text(
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, "home");
+                      },
+                      style: const ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll(
+                          Color(0xFFFFA902),
+                        ),
+                      ),
+                      child: const Text(
                         "Entrar",
                         style: TextStyle(color: Colors.black),
                       ),
