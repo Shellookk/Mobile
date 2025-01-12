@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_banco_douro/ui/home_scrren.dart';
+import 'package:flutter_banco_douro/ui/home_screen.dart';
 import 'package:flutter_banco_douro/ui/login_screen.dart';
 
 void main() {
